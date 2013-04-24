@@ -11,3 +11,6 @@ function killprocs() {
 
 # Teamocil tab completion
 complete -W "$(teamocil --list)" teamocil
+
+# Show path in prompt
+export PS1="[\u@\h \w]\\$ "

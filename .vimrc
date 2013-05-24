@@ -1,4 +1,5 @@
 set nocompatible
+filetype off
 
 set expandtab
 set hidden
@@ -14,7 +15,7 @@ set hlsearch
 let hasgit=executable("git")
 
 " Setting up Vundle - the vim plugin bundler
-let iCanHazVundle=1
+let iCanHazVundle=0
 let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
 if !filereadable(vundle_readme)
         echo "Installing Vundle.."
@@ -36,10 +37,7 @@ if iCanHazVundle == 0
         " let Vundle manage Vundle
         " required!
         Bundle 'gmarik/vundle'
-
-        echo "Installing Bundles, please ignore key map error messages"
-        echo ""
-        :BundleInstall
+        Bundle 'git-file.vim'
 endif
 
 if filereadable(expand("~/.vim/colors/solarized.vim"))

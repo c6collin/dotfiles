@@ -1,5 +1,6 @@
-set nocompatible
-filetype off
+filetype on
+filetype plugin on
+filetype plugin indent on
 
 set expandtab
 set hidden
@@ -38,6 +39,7 @@ if iCanHazVundle == 0
         " required!
         Bundle 'gmarik/vundle'
         Bundle 'git-file.vim'
+        Bundle 'Puppet-Syntax-Highlighting'
 endif
 
 if filereadable(expand("~/.vim/colors/solarized.vim"))
@@ -45,19 +47,29 @@ if filereadable(expand("~/.vim/colors/solarized.vim"))
         colorscheme solarized
 endif
 
-filetype plugin on
-filetype plugin indent on
-
 augroup filetype
-au! BufRead,BufNewFile *.proto setfiletype proto
-au! BufRead,BufNewFile *.sh setfiletype shellscript
-au! BufRead,BufNewFile *.json setfiletype javascript
+au! BufRead,BufNewFile *.proto set filetype=proto
+au! BufRead,BufNewFile *.sh set filetype=shellscript
+au! BufRead,BufNewFile *.json set filetype=javascript
+au! BufRead,BufNewFile *.pp set filetype=puppet
+au! BufRead,BufNewFile *pom.xml set filetype=pom
 augroup end
 
 " XML preferences
 autocmd FileType xml :set ts=4
 autocmd FileType xml :set shiftwidth=4
 autocmd FileType xml syntax on
+
+" Puppet preferences
+autocmd FileType puppet :set ts=2
+autocmd FileType puppet :set shiftwidth=2
+autocmd FileType puppet syntax on
+
+" Pom file preferences
+autocmd FileType pom :set ts=2
+autocmd FileType pom :set shiftwidth=2
+autocmd FileType pom syntax on
+autocmd FileType pom set syntax=xml
 
 " Java prefs
 autocmd FileType java syntax on

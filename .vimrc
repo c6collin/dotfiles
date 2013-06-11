@@ -49,11 +49,16 @@ endif
 
 augroup filetype
 au! BufRead,BufNewFile *.proto set filetype=proto
-au! BufRead,BufNewFile *.sh set filetype=shellscript
+au! BufRead,BufNewFile *.sh set filetype=sh
 au! BufRead,BufNewFile *.json set filetype=javascript
 au! BufRead,BufNewFile *.pp set filetype=puppet
 au! BufRead,BufNewFile *pom.xml set filetype=pom
 augroup end
+
+" PHP preferences
+autocmd FileType php :set ts=2
+autocmd FileType php :set shiftwidth=2
+autocmd FileType php syntax on
 
 " XML preferences
 autocmd FileType xml :set ts=4
@@ -75,8 +80,8 @@ autocmd FileType pom set syntax=xml
 autocmd FileType java syntax on
 
 " bash
-au FileType shellscript :set ts=2
-au FileType shellscript :set shiftwidth=2
+au FileType sh :set ts=2
+au FileType sh :set shiftwidth=2
 
 " proto
 "au FileType proto match ExtraWhitespace /\s\+$\|\%81v.\+/

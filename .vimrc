@@ -43,7 +43,7 @@ if iCanHazVundle == 0
 endif
 
 if filereadable(expand("~/.vim/colors/solarized.vim"))
-        set background=light
+        set background=dark
         colorscheme solarized
 endif
 

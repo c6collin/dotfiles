@@ -129,11 +129,10 @@ autocmd FileType ruby :set sw=2
 autocmd FileType ruby :set nu
 autocmd FileType ruby :set colorcolumn=81
 
-:autocmd ColorScheme * highlight ExtraWhitespace ctermbg=brred guibg=brred
-:autocmd ColorScheme * highlight OverLength ctermbg=red guibg=red
+":autocmd ColorScheme * highlight ExtraWhitespace ctermbg=dark guibg=dark
 
 " Trailng whitespace
-:highlight ExtraWhitespace ctermbg=red guibg=red guibg=#592929
+":highlight ExtraWhitespace ctermbg=red guibg=red guibg=#592929
 
 " Switch off :match highlighting.
 :match

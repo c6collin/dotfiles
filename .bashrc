@@ -8,6 +8,9 @@ function listprocs() {
 function killprocs() {
   ps -ef | grep $1 | grep -v grep | awk '{ system( "kill " $2 ) }'
 }
+function dos2unix() {
+  perl -i -pe 's/\r\n|\n|\r/\n/g' $1
+}
 
 # Teamocil tab completion
 complete -W "$(teamocil --list)" teamocil

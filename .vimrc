@@ -40,6 +40,8 @@ if iCanHazVundle == 0
         Bundle 'gmarik/vundle'
         Bundle 'git-file.vim'
         Bundle 'Puppet-Syntax-Highlighting'
+        Bundle 'Command-T'
+        " For command T you will have to go to ~/.vim/bundle/Command-T/ruby/command-t and run ruby extconf.rb && make
 endif
 
 if filereadable(expand("~/.vim/colors/solarized.vim"))

@@ -42,6 +42,8 @@ if iCanHazVundle == 0
         Bundle 'Puppet-Syntax-Highlighting'
         Bundle 'Command-T'
         " For command T you will have to go to ~/.vim/bundle/Command-T/ruby/command-t and run ruby extconf.rb && make
+        Bundle 'Lokaltog/Powerline'
+        Bundle 'scrooloose/syntastic'
 endif
 
 if filereadable(expand("~/.vim/colors/solarized.vim"))
@@ -146,6 +148,9 @@ set nowritebackup
 " Status bar
 set modeline
 set ls=2
+
+" Powerline
+set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 
 " Replace under cursor
 :nnoremap <Leader>s :%s/\(\<<C-r><C-w>\>\)/

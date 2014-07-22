@@ -154,3 +154,5 @@ set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 
 " Replace under cursor
 :nnoremap <Leader>s :%s/\(\<<C-r><C-w>\>\)/
+
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }

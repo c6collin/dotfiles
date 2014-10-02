@@ -1,4 +1,4 @@
-readonly dotfiles_root="$(pwd)/$(dirname $0)"
+readonly dotfiles_dir=~/Development/dotfiles
 
 alias ll='ls -l'
 alias la='ls -a'
@@ -21,7 +21,7 @@ complete -W "$(teamocil --list)" teamocil
 export PS1="[\u@\h \w]\\$ "
 
 # Git settings
-source ${dotfiles_root}/third_party/git-completion.bash
+source ${dotfiles_dir}/third_party/git-completion.bash
 git config --global alias.co checkout
 git config --global alias.br branch
 git config --global alias.ci commit
